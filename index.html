@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+
+    <meta charset="UTF-8" />
+    <title>Test</title>
+
+    <script src="https://unpkg.com/maplibre-gl@3.1.0/dist/maplibre-gl.js"></script>
+    <link
+      href="https://unpkg.com/maplibre-gl@3.1.0/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <link href="/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="map-container">
+      <div id="map" class="map"></div>
+      <div id="sidebar" class="sidebar">Sidebar Here</div>
+    </div>
+    <script>
+      var map = new maplibregl.Map({
+        container: "map",
+        style: "https://demotiles.maplibre.org/style.json", // stylesheet location
+        center: [-96, 39], // starting position [lng, lat]
+        zoom: 4, // starting zoom
+      });
+    </script>
+  </body>
+</html>
